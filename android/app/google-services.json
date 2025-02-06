@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "937881200676",
+    "project_id": "aibailbond-4d4fc",
+    "storage_bucket": "aibailbond-4d4fc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:937881200676:android:f101f6b6dd2d80c08ed0b1",
+        "android_client_info": {
+          "package_name": "com.aibailbond.agentapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGDbWxfvZyqT9l76g_gCLtBSiLoyJb0rM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
