@@ -1,3 +1,4 @@
+import 'package:code_automation_agent_app/screens/auth/ui/login.dart';
 import 'package:code_automation_agent_app/screens/auth/ui/sign_up/sign_up_one.dart';
 import 'package:code_automation_agent_app/utills/color_manager.dart';
 import 'package:flutter/material.dart';
@@ -23,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   _navigateToNextScreen() {
     Timer(const Duration(seconds: 3), () {
-      Get.offAll(() => SignUpScreenOne());
+      Get.offAll(() => LoginScreen());
     });
   }
 

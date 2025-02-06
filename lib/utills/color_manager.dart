@@ -5,4 +5,5 @@ class ColorManager {
   static const secondary = Color(0xFF0000);
   static const white = Colors.white;
   static const red = Colors.red;
+  static const green = Colors.green;
 }

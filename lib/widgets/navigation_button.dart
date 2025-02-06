@@ -3,8 +3,21 @@ import 'package:flutter/material.dart';
 
 class ForwardButton extends StatelessWidget {
   final VoidCallback onPress;
-  String? title;
-  ForwardButton({super.key, required this.onPress, this.title});
+  final String? title;
+  final Color? backgroundColor; // For button background color
+  final Color? arrowBackgroundColor; // For arrow background color
+  final Color? arrowColor; // For the color of the arrow
+  final Color? textColor; // For text color
+
+  ForwardButton({
+    super.key,
+    required this.onPress,
+    this.title,
+    this.backgroundColor,
+    this.arrowBackgroundColor,
+    this.arrowColor,
+    this.textColor,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +30,8 @@ class ForwardButton extends StatelessWidget {
             child: ElevatedButton(
               onPressed: onPress,
               style: ElevatedButton.styleFrom(
-                backgroundColor: ColorManager.primary,
+                backgroundColor: backgroundColor ??
+                    ColorManager.primary, // Default to primary if not passed
                 padding:
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                 shape: RoundedRectangleBorder(
@@ -29,24 +43,29 @@ class ForwardButton extends StatelessWidget {
                 children: [
                   Expanded(
                     child: Text(
-                      title ?? 'Next',
+                      title ?? 'Next', // Default text is 'Next'
                       textAlign: TextAlign.center, // Center the text
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontFamily: 'Poppins',
-                        color: ColorManager.white,
+                        color: textColor ??
+                            ColorManager
+                                .white, // Default to white text if not passed
                       ),
                     ),
                   ),
-                  if (title == null)
+                  if (title != null)
                     Container(
                       padding: const EdgeInsets.all(8),
-                      decoration: const BoxDecoration(
-                        color: ColorManager.white, // Circle color
+                      decoration: BoxDecoration(
+                        color: arrowBackgroundColor ??
+                            ColorManager.white, // Default white if not passed
                         shape: BoxShape.circle,
                       ),
-                      child: const Icon(
+                      child: Icon(
                         Icons.arrow_forward, // Forward arrow icon
-                        color: ColorManager.primary, // Icon color inside circle
+                        color: arrowColor ??
+                            ColorManager
+                                .primary, // Default to primary color for arrow if not passed
                       ),
                     ),
                 ],

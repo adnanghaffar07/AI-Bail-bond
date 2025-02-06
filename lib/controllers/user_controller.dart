@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 
 class AuthController extends GetxController {
   final UserRepository _userRepository = UserRepository();
-
+  var isRemembered = false.obs;
   var user = Rxn<UserModel>();
   var isLoading = false.obs;
   var errorMessage = ''.obs;
